@@ -1,4 +1,4 @@
-# grunt-svg-merge
+# grunt-iconic-doc
 
 > Extract json documentation from an iconic svg
 
