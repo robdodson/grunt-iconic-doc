@@ -22,7 +22,7 @@ module.exports = function (grunt) {
 
     // Merge task-specific and/or target-specific options with these defaults.
     var options = this.options({
-      className: '.iconic-documentation',
+      selector: '.iconic-documentation',
       outputFile: 'api.json'
     });
 
@@ -37,7 +37,7 @@ module.exports = function (grunt) {
           }
 
           var $ = cheerio.load(grunt.file.read(abspath));
-          var doc = yaml.load($(options.className).text());
+          var doc = yaml.load($(options.selector).text());
           var json = JSON.stringify(doc, null, 2);
           var outputPath;
           if (dest) {
